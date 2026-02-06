@@ -1,0 +1,365 @@
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Landing Page Background Styling */
+.landing-page {
+  background-image: url('/bg_img.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-heading {
+  text-align: center;
+  margin-bottom: 32px;
+  color: white;
+}
+
+.main-title {
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+
+  /* Premium glow */
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.sub-title {
+  margin-top: 6px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+
+  opacity: 0.85;
+
+  /* Subtle separator line feel */
+  position: relative;
+}
+
+.sub-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 10px auto 0;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+}
+
+
+.auth-buttons {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.auth-btn {
+  padding: 12px 28px;
+  min-width: 120px;
+
+  background-color: white;
+  color: black;
+
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 9999px;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect (optional but nice) */
+.auth-btn:hover {
+  background-color: #f3f3f3;
+  transform: translateY(-1px);
+}
+
+/* Click effect */
+.auth-btn:active {
+  transform: translateY(0);
+}
+
+.glass-box {
+  max-width: 600px;          /* maximum width constraint */
+  min-width: 300px;          /* minimum width */
+  width: auto;               /* expands with content */
+  min-height: 200px;
+  padding: 24px 28px;
+  border-radius: 16px;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* Subtle border and shadow */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+  /* Optional */
+  color:white;
+  text-align: center; 
+}
+
+.animated-text{
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  font-family: Chango;
+  min-height: 4.5rem; /* prevents layout jump */
+
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  
+  animation: fadeInSlide 0.8s ease-out forwards;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* SignUp.jsx */
+.signup-hero{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.signup-hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/bg_img.jpg");
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(10px);
+  transform: scale(1.05); /* prevents edge clipping */
+  z-index: -1;
+}
+.hero-role{
+  background: #f3f4f6;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 18px;
+  padding: 40px 48px;
+  text-align: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+.role-title {
+  color: black;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+.hero-btns{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.hero-button{
+  min-width: 140px;
+  padding: 14px 28px;
+
+  border-radius: 12px;
+  border: none;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.hero-button.Sevak{
+  background: #374151;
+  color: white;
+}
+.hero-button.Grahak{
+  background: #d1d5db;
+  color: #374151;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.hero-button:hover {
+  transform: translateY(-2px);
+}
+.hero-button.Sevak:hover{
+  background: #f1f1f1;
+}
+.hero-button.Grahak:hover{
+  background: rgba(255, 255, 255, 0.1);
+}
+/* Sevak.jsx */
+.sevak-signup{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e7eb;
+  padding: 20px;
+}
+.signup-card {
+  width: 100%;
+  max-width: 440px;
+
+  background: #db2777;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 20px;
+  padding: 36px 40px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.signup-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-family: Slackside One;
+}
+
+.signup-subtitle {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  margin-bottom: 28px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  font-family: Slackside One;
+}
+
+.form-group input {
+  padding: 12px 14px;
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input:focus {
+  border-color: white;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.signup-btn {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+
+  background: white;
+  color: black;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.signup-btn:hover {
+  background: #f1f1f1;
+  transform: translateY(-1px);
+}
+
+/* When the back button follows the signup button, add horizontal gap */
+.signup-btn + .back {
+  margin-left: 12px;
+}
+
+.back{
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+
+  background: white;
+  color: black;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.back:hover{
+  background: #f1f1f1;
+  transform: translateY(-1px);
+}
+.login-link {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.login-link span {
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.login-link span:hover {
+  text-decoration: underline;
+}
+
+/* grahak signUp*/
+.grahak-signup{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e7eb;
+  padding: 20px;
+}
